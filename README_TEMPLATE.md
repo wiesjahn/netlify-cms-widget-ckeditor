@@ -1,30 +1,30 @@
-# netlify-cms-widget-\<name\>
+# netlify-cms-widget-ckeditor
 
 [Check out a demo!](https://replace-with-widget-name.netlify.com/demo)
 
-Overview of what your widget does.
+Adds a CKEditor WYSIWIG as Opposed to the MarkDown Editor.
 
 ## Install
 
 As an npm package:
 
 ```shell
-npm install --save netlify-cms-widget-<name>
+npm install --save netlify-cms-widget-ckeditor
 ```
 
 ```js
-import <name> from 'netlify-cms-widget-<name>'
+import ckeditor from 'netlify-cms-widget-ckeditor'
 
-CMS.registerWidget('<name>', <name>Control, <name>Preview)
+CMS.registerWidget('ckeditor', ckeditorControl, ckeditorPreview)
 ```
 
 Via `script` tag:
 
 ```html
-<script src="https://unpkg.com/netlify-cms-widget-<name>@^1.0.0"></script>
+<script src="https://unpkg.com/netlify-cms-widget-ckeditor@^1.0.0"></script>
 
 <script>
-  CMS.registerWidget('<name>', <name>Control, <name>Preview)
+  CMS.registerWidget('ckeditor', ckeditorControl)
 </script>
 ```
 
@@ -34,13 +34,9 @@ Add to your Netlify CMS configuration:
 
 ```yaml
     fields:
-      - { name: <fieldname>, label: <fieldlabel>, widget: <name> }
+      - { name: <fieldname>, label: <fieldlabel>, widget: ckeditor }
 ```
-
-## Configuration
-
-Explain any custom configuration steps here, or omit the section if there are none.
 
 ## Support
 
-For help with this widget, open an [issue](https://github.com/<user>/<repo>) or ask the Netlify CMS community in [Gitter](https://gitter.im/netlify/netlifycms).
+For help with this widget, open an [issue](https://github.com/wiesjahnn/netlify-cms-widget-ckeditor) or ask the Netlify CMS community in [Gitter](https://gitter.im/netlify/netlifycms).

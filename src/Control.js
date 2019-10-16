@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import CKEditor from 'ckeditor4-react';
 export default class Control extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -17,18 +17,17 @@ export default class Control extends React.Component {
     const {
       forID,
       value,
-      onChange,
       classNameWrapper,
     } = this.props;
 
     return (
-      <input
-        type="text"
-        id={forID}
-        className={classNameWrapper}
-        value={value || ''}
-        onChange={e => onChange(e.target.value)}
-      />
+      <div>
+        <CKEditor
+                  id={forID}
+                  className={classNameWrapper}
+                  value={value || ''}
+        />
+      </div>
     );
   }
 }

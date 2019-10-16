@@ -1,7 +1,7 @@
 import './bootstrap.js'
 import CMS, { init } from 'netlify-cms'
 import 'netlify-cms/dist/cms.css'
-import { Control, Preview } from '../src'
+import  Control from '../src/Control'
 
 const config = {
   backend: {
@@ -10,19 +10,22 @@ const config = {
   },
   media_folder: 'assets',
   collections: [{
+    editor: {
+      preview: false
+    },
     name: 'test',
-    label: 'Test',
+    label: 'Content',
     files: [{
       file: 'test.yml',
       name: 'test',
       label: 'Test',
       fields: [
-        { name: 'test_widget', label: 'Test Widget', widget: 'test'},
+        { name: 'test_widget', label: 'Content', widget: 'ckeditor'},
       ],
     }],
   }],
 }
 
-CMS.registerWidget('test', Control, Preview)
+CMS.registerWidget('ckeditor', Control)
 
 init({ config })
