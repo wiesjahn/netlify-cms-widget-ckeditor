@@ -21,13 +21,11 @@ export default class Control extends React.Component {
     } = this.props;
 
     return (
-      <div>
         <CKEditor
                   id={forID}
                   className={classNameWrapper}
                   value={value || ''}
         />
-      </div>
     );
   }
 }
